@@ -1,7 +1,6 @@
 <% @subscriber ||= Spree::Chimpy::Subscriber.new %>
 <%= form_for @subscriber do |f| %>
   <div class="input-group">
-    <input type="email" placeholder="Email address">
     <%= f.email_field :email, placeholder: "Email address", required: true %>
     <%= f.hidden_field :subscribed, value: true %>
     <button><i class="fa fa-send"></i></button>
