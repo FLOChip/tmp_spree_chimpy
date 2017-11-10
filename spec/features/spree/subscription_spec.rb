@@ -28,13 +28,13 @@ feature 'Chimpy', :js do
   end
 
   def subscribe!
-    expect(page).to have_text 'Sign me up to the newsletter'
+    expect(page).to have_text 'Sign me up for email updates on special promotions, latest products, featured news and more!'
 
     fill_in 'Email', with: FFaker::Internet.email
     fill_in 'Password', with: 'secret123'
     fill_in 'Password Confirmation', with: 'secret123'
 
-    check 'Sign me up to the newsletter'
+    check 'Sign me up for email updates on special promotions, latest products, featured news and more!'
 
     expect(page.has_checked_field?('spree_user_subscribed')).to be_truthy
     click_button 'Create'
